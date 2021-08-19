@@ -1,0 +1,72 @@
+body {
+	font: 150% Helvetica, Arial, sans-serif;
+	background: mintcream;
+}
+
+h1 {
+	padding-top: 10px;
+	font: bold 180% Helvetica, sans-serif;
+}
+
+h2 {
+	text-align: center;
+}
+
+h3 {
+	text-align: center;
+}
+
+#page {
+	width: 960px; 
+	margin: 20px auto;
+	background: lavender;
+}
+
+#top {
+	height: 140px;
+    color: white;
+    text-align: center;
+    background-color: darkblue;
+	padding-top: 5px;
+	padding-bottom: 50px;
+}
+
+#content {
+	width: 600px;
+	height: fit-content;
+	float: left;
+    background: snow;
+	text-align: justify;
+	padding: 10px 50px 50px 50px;
+}
+
+#side {
+	float: right;
+	width: 200px;
+	height: auto;
+	text-align: end;
+	background: thistle;
+	padding: 20px;
+}
+
+#bot {
+	position: bottom;
+	clear: both;
+    text-align: center;
+    font-weight: bold;
+    font-size: 14px;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+#top, #content, #side {
+	margin-bottom: 5px;
+}
+
+#content, #side, #bot {
+	border: 5px grey;
+	border-style: ridge;
+}
+
+#top, #page {
+	border: 1px solid black;
+}
