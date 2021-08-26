@@ -1,36 +1,55 @@
 :root {
     --margin: 10px;
+    --border: 5px;
 }
 
 body{
+    justify-content: center;
     font-family: Helvetica, Verdana, sans-serif;
-    background-color: rgb(110, 94, 51);
+    background-color: rgb(100, 90, 60);
 }
 
 .top {
+    height: 90px;
     text-align: center;
     text-transform: uppercase;
-    font-stretch: extra-expanded;
-    font-size: 70px;
+    font-stretch: expanded;
+    font-size: 55px;
     background-color: darkcyan;
+    padding-top: 30px;
+    color: cyan;
+    word-wrap: break-word;
 }
 
+.banner_1{
+    height: 150px;
+    width: 150px;
+    position: absolute;
+    top: -15px;
+    left: -15px;
+}
+.banner_2{
+    height: 150px;
+    width: 150px;
+    position: absolute;
+    top: -15px;
+    right: -15px;
+}
 .container-box {
+    margin: 15px;
     display: flex;
     flex-wrap: wrap;
+    border: var(--border) dotted darkcyan;
 }
 
 .a {
-    width: calc((100%/5) - (var(--margin)* 2));
+    width: calc((100%/5) - ((var(--margin) * 2) + (var(--border) * 2)));
 }
 
-.s {
-    color: purple;
-    text-decoration: purple underline;
-}
+
 .box {
+    border: var(--border) darkcyan outset;
     background-color: cyan;
-    border-radius: 5px;
     margin: var(--margin);
     height: 50px;
     padding-top: 30px;
@@ -39,53 +58,47 @@ body{
     vertical-align: middle;
 }
 
-h2 {
-    color: #2C88A7;
-    text-decoration: #2C88A7 underline;
-}
 
-article {
-    background-color: snow;
-    border: 1px solid black;
+.content article {
+    background-color: lightcyan;
+    border: 0;
     margin-bottom: 30px;
     padding: 15px;
-    width: 70%;
+    width: calc(100%/3*2);
 }
-
 article h2 {
-    border-bottom: 1px dashed #7E9F19;
-    margin: 0;
+    margin: 1px;
 }
-
 article img {
-    border: 1px solid #7E9F19;
+    /* border: 1px solid navy; */
     float: left;
     margin: 10px 10px 0 0;
-    padding: 2px;
+    padding: 5px;
     width: 160px;
     height: 160px;
 }
 
-article a { /* mudando a cor dos links para negrito */
+a {
     color: #2C88A7;
     font-weight: bold;
 }
 
 footer {
     text-align: center;
+    font-size: 18px;
     font-family: 'Times New Roman', Times, serif;
     background-color: darkcyan;
     color: white;
     text-decoration: white  underline 1px;
-    padding: 3px;
+    border: var(--border) cyan outset;
 }
 
 aside {
-    background-color: #FFFBE4;
-    border: 1px solid #C9BC8F;
+    background-color: lightcyan;
+    border: 1px solid darkcyan;
     padding: 5px;
     float: right;
-    width: 25%;
+    width: calc(25%);
 }
 aside h3 {
     font-size: 14px;
@@ -94,4 +107,16 @@ aside h3 {
 
 .clear {
     clear: both;
+}
+
+h2 {
+    color: #2C88A7;
+    text-decoration: #2C88A7 underline;
+    font-weight: bold;
+}
+
+ul li {
+    color: #2C88A7;
+    text-decoration: #2C88A7 underline;
+    font-weight: bold;
 }
