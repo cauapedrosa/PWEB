@@ -1,45 +1,50 @@
 :root {
     --margin: 10px;
     --border: 5px;
+    --color1: #3A4257;
+    --color2: #F0DDBC;
+    --color11: #f0e3ce;
+    --colorLink: #2C88A7;
 }
 
 body{
     justify-content: center;
     font-family: Helvetica, Verdana, sans-serif;
-    background-color: rgb(100, 90, 60);
+    background-color: var(--color2);
 }
 
 .top {
-    height: 90px;
+    height: 70px;
     text-align: center;
     text-transform: uppercase;
     font-stretch: expanded;
     font-size: 55px;
-    background-color: darkcyan;
-    padding-top: 30px;
-    color: cyan;
+    background-color: var(--color1);
+    padding-top: 10px;
+    color: white;
     word-wrap: break-word;
 }
 
 .banner_1{
     height: 150px;
     width: 150px;
-    position: absolute;
-    top: -15px;
+    position: fixed;
+    bottom: -20px;
     left: -15px;
 }
 .banner_2{
     height: 150px;
     width: 150px;
-    position: absolute;
-    top: -15px;
+    position: fixed;
+    bottom: -20px;
     right: -15px;
 }
 .container-box {
     margin: 15px;
     display: flex;
     flex-wrap: wrap;
-    border: var(--border) dotted darkcyan;
+    border: var(--border) dotted var(--color11);
+    justify-content: space-evenly;
 }
 
 .a {
@@ -48,8 +53,9 @@ body{
 
 
 .box {
-    border: var(--border) darkcyan outset;
-    background-color: cyan;
+    border: var(--border) var(--color1) outset;
+    background-color: var(--color1);
+    color:white;
     margin: var(--margin);
     height: 50px;
     padding-top: 30px;
@@ -60,8 +66,8 @@ body{
 
 
 .content article {
-    background-color: lightcyan;
-    border: 0;
+    background-color: var(--color11);
+    border: 1px solid var(--color1);
     margin-bottom: 30px;
     padding: 15px;
     width: calc(100%/3*2);
@@ -79,7 +85,7 @@ article img {
 }
 
 a {
-    color: #2C88A7;
+    color: var(--colorLink);
     font-weight: bold;
 }
 
@@ -87,15 +93,15 @@ footer {
     text-align: center;
     font-size: 18px;
     font-family: 'Times New Roman', Times, serif;
-    background-color: darkcyan;
+    background-color: var(--color1);
     color: white;
     text-decoration: white  underline 1px;
-    border: var(--border) cyan outset;
+    border: var(--border) var(--color1) outset;
 }
 
 aside {
-    background-color: lightcyan;
-    border: 1px solid darkcyan;
+    background-color: var(--color11);
+    border: 1px solid var(--color1);
     padding: 5px;
     float: right;
     width: calc(25%);
@@ -110,13 +116,13 @@ aside h3 {
 }
 
 h2 {
-    color: #2C88A7;
-    text-decoration: #2C88A7 underline;
+    color: var(--colorLink);
+    text-decoration: var(--colorLink) underline;
     font-weight: bold;
 }
 
 ul li {
-    color: #2C88A7;
-    text-decoration: #2C88A7 underline;
+    color: var(--colorLink);
+    text-decoration: var(--colorLink) underline;
     font-weight: bold;
 }
