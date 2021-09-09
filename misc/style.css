@@ -11,27 +11,32 @@ body{
     text-align: center;
     display: flex;
     justify-content: space-evenly;
-    padding-bottom: 10vh;
 }
 .topbar a{
     font-size: 5rem;
     text-decoration: none;
-    color: white;
+    color: #fff;
 } 
 /* List */
+.atvsList {
+    margin-top: 20vh;
+}
 .atvsList .row {
-    margin-top: 15vh;
+    display: flex;
+    margin-top: 5vh;
     height: 50%;
     width: 100%;
     text-align: center;
-    display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
 }
 .atvsList a {
     background-color: #444;
     padding: 20px;
-    color: white;
+    width: 25vw;
+    color: #fff;
     font-size: 3rem;
-    border: 5px solid #b100b1;
-    border-style: groove;
+    border: 5px solid #fff;
+    border-radius: 0% 10%;
+    border-style: outset;
+    text-decoration: none;
 } 
