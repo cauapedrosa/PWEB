@@ -1,0 +1,37 @@
+/* Body */
+body{
+    background-color: #222;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+}
+/* Topbar */
+.topbar{
+    height: fit-content;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+    padding-bottom: 10vh;
+}
+.topbar a{
+    font-size: 5rem;
+    text-decoration: none;
+    color: white;
+} 
+/* List */
+.atvsList .row {
+    margin-top: 15vh;
+    height: 50%;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+}
+.atvsList a {
+    background-color: #444;
+    padding: 20px;
+    color: white;
+    font-size: 3rem;
+    border: 5px solid #b100b1;
+    border-style: groove;
+} 
