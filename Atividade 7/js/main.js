@@ -2,13 +2,14 @@ const playerScore = document.getElementsByClassName("playerScore");
 const computerScore = document.getElementsByClassName("computerScore");
 const pcount = document.getElementById("p-count");
 const ccount = document.getElementById("c-count");
-let pScore=0;
-let cScore=0;
+const rcount = document.getElementById("r-count");
+const myLog = document.getElementById("atvLog");
+let pScore = 0;
+let cScore = 0;
+let rCount = 0;
 
 function game(myMove, aiMove) {
-
-    console.log(`pScore: ${pScore} | cScore: ${cScore}`);
-
+    rCount++;
     let res = playRound(myMove, aiMove);
     let out = "";
     if (res == 1) {
@@ -23,7 +24,9 @@ function game(myMove, aiMove) {
         out += "It's a Tie!";
     }
     out += `\nYou chose ${myMove} and the AI chose ${aiMove}`;
-    alert(out);
+    rcount.innerHTML = rCount;
+    myLog.innerHTML = out;
+
 }
 
 
@@ -36,7 +39,7 @@ function playRound(userChoice, compChoice) {
     } else if (userChoice == "rock" && compChoice == "rock") {
         return 3;
     }
-    //paper Choice
+    //Paper Choice
     else if (userChoice == "paper" && compChoice == "rock") {
         return 1;
     } else if (userChoice == "paper" && compChoice == "scissors") {
@@ -44,7 +47,7 @@ function playRound(userChoice, compChoice) {
     } else if (userChoice == "paper" && compChoice == "paper") {
         return 3;
     }
-    //scissors Choice
+    //Scissors Choice
     else if (userChoice == "scissors" && compChoice == "paper") {
         return 1;
     } else if (userChoice == "scissors" && compChoice == "rock") {
