@@ -1,0 +1,32 @@
+:root {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background-color: #000;
+    --coolPurple: #AA00FF;
+}
+
+/* #################### Viewport Styling #################### */
+
+@-ms-viewport {
+    width: extend-to-zoom;
+    zoom: 1.0;
+}
+
+@viewport {
+    zoom: 1.0;
+    width: extend-to-zoom;
+}
+
+/* #################### Media Queries #################### */
+
+@media screen and (max-width: 900px) {
+    .wave {
+        display: none;
+    }
+    #visual {
+        display: none;
+        visibility: hidden;
+    }
+}

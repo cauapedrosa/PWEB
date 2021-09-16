@@ -1,12 +1,4 @@
-:root {
-    width: 100%;
-    width: auto;
-    overflow-x: hidden;
-    overflow-y: auto;
-    --coolPurple: #AA00FF;
-    background-color: #000;
-}
-
+@import url("../css/globals.css");
 html, body {
     margin: 0%;
     font-family: Helvetica, Arial, sans-serif;
@@ -207,16 +199,4 @@ html, body {
     border: 1px white solid;
     padding: 0.35rem;
     font-size: 1rem;
-}
-
-/* #################### Media Queries #################### */
-
-@media screen and (max-width: 900px) {
-    .wave{
-        display: none;
-    }
-    #visual {
-        display: none;
-        visibility: hidden;
-    }
 }
