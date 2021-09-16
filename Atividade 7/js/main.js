@@ -23,10 +23,9 @@ function game(myMove, aiMove) {
     } else {
         out += "It's a Tie!";
     }
-    out += `\nYou chose ${myMove} and the AI chose ${aiMove}`;
+    out += `<br>You chose ${myMove} and the AI chose ${aiMove}<br>`;
     rcount.innerHTML = rCount;
     myLog.innerHTML = out;
-
 }
 
 
