@@ -1,0 +1,117 @@
+:root {
+    background-color: #111;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100vw;
+    min-width: 520px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    --btnWidth: calc( 100vw/3 - 3* var(--btnPadding));
+    --btnPadding: 5rem;
+}
+
+body {
+
+    justify-content: center;
+}
+
+/* #################### Topbar #################### */
+
+.topbar {
+    position: absolute;
+    top: 0;
+    font-size: 3rem;
+}
+
+/* #################### Game #################### */
+
+.game {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+/* #################### Row #################### */
+
+.options {
+    border: 1px solid #fff;
+    display: flex;
+    flex-direction: row-;
+    width: 100%;
+    justify-content: space-evenly;
+    margin-top: 2rem;
+    gap: 2rem;
+}
+
+.btn {
+    /*  ##### Appearance #####  */
+    border: 2px solid #fff;
+    color: #f00;
+    background-color: #fff;
+    cursor: pointer;
+    /* ##### Sizes ##### */
+    width: var(--btnWidth);
+    padding: var(--btnPadding);
+    margin: 5rem 0 5rem 0;
+    /*  ##### Background #####  */
+    background-color: #000;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-origin: padding-box;
+    background-position: center;
+}
+
+/* #################### Buttons #################### */
+
+.rock {
+    background-image: url(/img/rock.png);
+}
+
+.paper {
+    background-image: url(/img/paper.png);
+}
+
+.scissor {
+    background-image: url(/img/scissors.png);
+}
+
+#reload {
+    margin-top: 2rem;
+    padding: 2rem;
+    border: none;
+    background-image: url(/img/reload_icon.png);
+    background-color: #000;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* #################### Score #################### */
+
+.scoreboard {
+    border: 1px solid #fff;
+    margin-top: 3rem;
+    width: 100%;
+    display: flex;
+    gap: 2rem;
+    justify-content: space-around;
+    text-align: center;
+}
+
+/* #################### Botbar #################### */
+
+.botbar {
+    border: 1px solid #FFF;
+    background-color: #000;
+    color: #FFF;
+    width: 99vw;
+    min-height: 30px;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    font-weight: 700;
+}

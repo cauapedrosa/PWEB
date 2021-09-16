@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="img/icon.png" />
+    <title>Rock, Paper, Scissors - Cauã Pedrosa - PWEB Ativ7</title>
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+    <section class="game">
+
+        <div class="topbar">Rock, Paper, Scissors</div>
+        <div class="move">Choose your move</div>
+        <div class="options">
+            <button class="btn rock" onclick="clickRock()"></button>
+            <button class="btn paper" onclick="clickPaper()"></button>
+            <button class="btn scissor" onclick="clickScissors()"></button>
+        </div>
+        <!--Display Scoreboard -->
+        <div class="scoreboard">
+            <div class="playerScore">
+                <h2>Player</h2>
+                <p class="count" id="p-count">0</p>
+            </div>
+            <div class="computerScore">
+                <h2>Computer</h2>
+                <p class="count" id="c-count">0</p>
+            </div>
+        </div>
+        <button id="reload" onclick="reload()"></button>
+    </section>
+
+
+    <div class="botbar">
+        <p>Rock, Paper, Scissors by Cauã Pedrosa - Sept/2021</p>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
