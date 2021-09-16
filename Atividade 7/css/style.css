@@ -67,22 +67,22 @@ body {
 /* #################### Buttons #################### */
 
 .rock {
-    background-image: url(/img/rock.png);
+    background-image: url("./img/rock.png");
 }
 
 .paper {
-    background-image: url(/img/paper.png);
+    background-image: url("./img/paper.png");
 }
 
 .scissor {
-    background-image: url(/img/scissors.png);
+    background-image: url("./img/scissors.png");
 }
 
 #reload {
     margin-top: 2rem;
     padding: 2rem;
     border: none;
-    background-image: url(/img/reload_icon.png);
+    background-image: url("./img/reload_icon.png");
     background-color: #000;
     background-size: contain;
     background-repeat: no-repeat;
