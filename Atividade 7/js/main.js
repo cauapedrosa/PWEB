@@ -12,7 +12,11 @@ function game(myMove, aiMove) {
     rCount++;
     let res = playRound(myMove, aiMove);
     let out = "";
-    if (res == 1) {
+
+    if (res < 0) {
+        alert("Something went wrong on playRound() function.")
+    } else {
+    } if (res == 1) {
         out += "You Win!";
         pScore++;
         pcount.innerHTML = pScore;
@@ -54,7 +58,7 @@ function playRound(userChoice, compChoice) {
     } else if (userChoice == "scissors" && compChoice == "scissors") {
         return 3;
     } else {
-        return "Something Went Wrong";
+        return -1;
     }
 }
 
