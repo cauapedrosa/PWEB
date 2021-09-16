@@ -6,10 +6,6 @@ html, body {
     width: 100%;
     height: 100%;
     color: #fff;
-    text-align: center;
-    align-content: center;
-    justify-content: center;
-    justify-items: center;
 }
 
 .main {
@@ -67,7 +63,7 @@ html, body {
     position: fixed;
     width: 900px;
     height: 600px;
-    transform: scale(150%) translateY(-10%);
+    transform: scale(150%);
     z-index: -1;
     opacity: 50%;
 }
@@ -182,7 +178,7 @@ html, body {
 .botbar {
     /* border: 1px solid fuchsia; */
     position: relative;
-    bottom: -1rem;
+    bottom: -10rem;
     width: 100%;
     text-align: center;
     background-image: url("../svg/layered_waves1.svg");
