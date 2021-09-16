@@ -1,7 +1,7 @@
 :root {
     width: 100%;
     width: auto;
-    /* overflow-x: hidden; */
+    overflow-x: hidden;
     overflow-y: auto;
     --coolPurple: #AA00FF;
     background-color: #000;
@@ -9,20 +9,29 @@
 
 html, body {
     margin: 0%;
-    text-align: center;
+    font-family: Helvetica, Arial, sans-serif;
     box-sizing: border-box;
     width: 100%;
     height: 100%;
     color: #fff;
-    font-family: Helvetica, Arial, sans-serif;
+    text-align: center;
+    align-content: center;
+    justify-content: center;
+    justify-items: center;
 }
 
 .main {
-    /* border: 1px solid fuchsia; */
+    position: relative;
     width: 100%;
     display: grid;
     align-items: center;
+    grid-auto-flow: row;
     justify-content: center;
+}
+
+.game {
+    position: relative;
+    width: 100%;
 }
 
 /* #################### Topbar #################### */
@@ -63,10 +72,10 @@ html, body {
 }
 
 #visual {
-    width: 900;
-    height: 600;
-    position: absolute;
-    transform: scale(150%) translateY(-20%);
+    position: fixed;
+    width: 900px;
+    height: 600px;
+    transform: scale(150%) translateY(-10%);
     z-index: -1;
     opacity: 50%;
 }
@@ -80,10 +89,6 @@ html, body {
     justify-content: center;
     align-items: center;
     text-align: center;
-}
-
-.move {
-    font-size: 2rem;
 }
 
 /* #################### Row #################### */
@@ -132,16 +137,27 @@ html, body {
 }
 
 #reload {
-    margin-top: 50%;
-    height: 5rem;
-    width: 5rem;
+    position: relative;
+    top: 0;
+    right: 0;
+    margin-top: 5rem;
     border: none;
-    background-image: url("../img/reload_icon.png");
-    background-color: #000;
+    background: none;
+    /* background-image: url("../img/reload_icon.png"); */
+    /* background-color: #000; */
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
     cursor: pointer;
+    /*  */
+    color: #fff;
+}
+
+#reload img {
+    /* border: 1px solid lime; */
+    position: relative;
+    z-index: 1;
+    max-width: 50px;
 }
 
 /* #################### Activity Log #################### */
@@ -150,7 +166,7 @@ html, body {
     /* border: 1px magenta solid; */
     background: none;
     margin-top: 2rem;
-    font-size: 2.5rem;
+    font-size: 2rem;
 }
 
 /* #################### Scoreboard #################### */
@@ -172,8 +188,9 @@ html, body {
 /* #################### Botbar #################### */
 
 .botbar {
+    /* border: 1px solid fuchsia; */
     position: relative;
-    bottom: -3rem;
+    bottom: -1rem;
     width: 100%;
     text-align: center;
     background-image: url("../svg/layered_waves1.svg");
@@ -183,6 +200,8 @@ html, body {
 }
 
 .botbar a {
+    position: relative;
+    bottom: -3.5rem;
     color: #fff;
     text-decoration: none;
     border: 1px white solid;
@@ -193,7 +212,10 @@ html, body {
 /* #################### Media Queries #################### */
 
 @media screen and (max-width: 900px) {
-    #visual{
+    .wave{
+        display: none;
+    }
+    #visual {
         display: none;
         visibility: hidden;
     }

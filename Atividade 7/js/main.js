@@ -73,6 +73,7 @@ function compChoice() {
         compChoice = "scissors";
     }
     console.log("in compChoice()\nComputer just chose: " + compChoice);
+    alert(`The Computer chose ${compChoice}.`);
     return compChoice
 }
 
