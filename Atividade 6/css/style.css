@@ -1,5 +1,8 @@
-body{
+body {
     background-color: #222;
     font-family: Arial, Helvetica, sans-serif;
     color: #fff;
+    justify-content: center;
+    text-align: center;
+    padding-top: 20rem;
 }

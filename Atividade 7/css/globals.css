@@ -24,24 +24,40 @@ body::-webkit-scrollbar-thumb {
 
 /* #################### Viewport  #################### */
 
-@-ms-viewport {
-    width: extend-to-zoom;
-    zoom: 1.0;
-}
-
 @viewport {
     zoom: 1.0;
     width: extend-to-zoom;
 }
 
+@-ms-viewport {
+    width: extend-to-zoom;
+    zoom: 1.0;
+}
+
 /* #################### Media Queries #################### */
 
 @media screen and (max-width: 900px) {
+    #visual {
+        /* transform: scale(150%) translateY(-20%); */
+        transform: translateY(-30%);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .options {
+        border: none;
+    }
+}
+
+@media screen and (max-width: 375px) {
     .wave {
         display: none;
     }
     #visual {
         display: none;
         visibility: hidden;
+    }
+    .botbar {
+        background-image: none;
     }
 }

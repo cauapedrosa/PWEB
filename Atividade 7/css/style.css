@@ -63,9 +63,9 @@ html, body {
     position: fixed;
     width: 900px;
     height: 600px;
-    transform: scale(150%);
+    transform: scale(150%) translateY(-20%);
     z-index: -1;
-    opacity: 50%;
+    opacity: 75%;
 }
 
 /* #################### Game #################### */
