@@ -90,4 +90,5 @@ label {
     height: 100%;
     opacity: 100%;
     transition: ease 1s;
+    z-index: 1;
 }
