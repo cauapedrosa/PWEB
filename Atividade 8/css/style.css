@@ -1,13 +1,10 @@
 @import url("../css/globals.css");
-html, body {
-    margin: 0%;
-    font-family: Helvetica, Arial, sans-serif;
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
-    width: 100%;
-    height: 100%;
     color: #fff;
-    line-height: 2rem;
-    overflow-x: hidden;
+    font-family: Helvetica, Arial, sans-serif;
 }
 
 h1 {
@@ -20,7 +17,6 @@ h1:hover {
 }
 
 .inputform {
-    /* width: 100%; */
     outline: 1px solid var(--coolPurple);
     min-width: 50%;
     margin: 1rem;
@@ -29,10 +25,18 @@ h1:hover {
 
 .row {
     text-align: center;
-    width: 100%;
+    max-width: 100%;
     outline: 1px solid var(--coolPurple);
     padding: 1rem;
     margin-top: 1rem;
+}
+
+.row #idade {
+    background-color: black;
+    border: none;
+    outline: 1px solid var(--coolPurple);
+    outline-offset: 1px;
+    width: 5ch;
 }
 
 .btnbar {
