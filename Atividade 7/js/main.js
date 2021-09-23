@@ -17,19 +17,19 @@ function game(myMove, aiMove) {
         alert("Something went wrong on playRound() function.")
     } else {
     } if (res == 1) {
-        out += "You Win!";
+        out += `<div class="win">You Win!</div>`;
         pScore++;
         pcount.innerHTML = pScore;
     } else if (res == 2) {
-        out += "You Lose!";
+        out += `<div class="lose">You Lose!</div>`;
         cScore++;
         ccount.innerHTML = cScore;
     } else {
-        out += "It's a Tie!";
+        out += `<div class="tie">It's a Tie.</div>`;
     }
     out += `<br>You chose ${myMove} and the AI chose ${aiMove}<br>`;
-    rcount.innerHTML = rCount;
     myLog.innerHTML = out;
+    rcount.innerHTML = rCount;
 }
 
 

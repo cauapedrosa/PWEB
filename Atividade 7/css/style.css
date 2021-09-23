@@ -63,7 +63,7 @@ html, body {
     position: fixed;
     width: 900px;
     height: 600px;
-    transform: scale(150%) translateY(-20%);
+    transform: scale(150%) translateY(-5%);
     z-index: -1;
     opacity: 75%;
 }
@@ -93,10 +93,8 @@ html, body {
     --btnPadding: 3rem;
     --verticalMargin: 3rem;
     /*  ##### Appearance #####  */
-    border: 4px #fff;
-    border-style: outset;
-    color: #f00;
-    background-color: #fff;
+    outline: none;
+    border: 1px solid #fff;
     cursor: pointer;
     /* ##### Sizes ##### */
     padding: var(--btnPadding);
@@ -105,9 +103,17 @@ html, body {
     /*  ##### Background #####  */
     background-color: #000;
     background-size: contain;
-    background-repeat: no-repeat;
+    /* background-repeat: no-repeat;
     background-origin: padding-box;
-    background-position: center;
+    background-position: center; */
+}
+
+.btn:hover {
+    /* border-color: black; */
+    outline: dashed white;
+    outline-offset: -5px;
+    outline-width: 1px;
+    /* background-color: var(--coolPurple); */
 }
 
 /* #################### Buttons #################### */
@@ -131,21 +137,13 @@ html, body {
     margin-top: 5rem;
     border: none;
     background: none;
-    /* background-image: url("../img/reload_icon.png"); */
-    /* background-color: #000; */
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
     cursor: pointer;
-    /*  */
-    color: #fff;
 }
 
 #reload img {
-    /* border: 1px solid lime; */
+    max-width: 50px;
     position: relative;
     z-index: 1;
-    max-width: 50px;
 }
 
 /* #################### Activity Log #################### */
@@ -173,12 +171,19 @@ html, body {
     min-width: calc(100%/3);
 }
 
+.win {
+    color: lime;
+}
+
+.lose {
+    color: red;
+}
+
 /* #################### Botbar #################### */
 
 .botbar {
-    /* border: 1px solid fuchsia; */
     position: relative;
-    bottom: -10rem;
+    bottom: -5%;
     width: 100%;
     text-align: center;
     background-image: url("../svg/layered_waves1.svg");
