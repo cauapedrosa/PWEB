@@ -6,6 +6,7 @@ html, body {
     width: 100%;
     height: 100%;
     color: #fff;
+    line-height: 2rem;
 }
 
 h1 {
@@ -18,6 +19,7 @@ h1:hover {
 }
 
 .inputform {
+    position: relative;
     outline: 1px solid var(--coolPurple);
     min-width: 50%;
     max-width: max-content;
@@ -26,14 +28,15 @@ h1:hover {
 }
 
 .row {
-    outline: 1px solid white;
-    max-width: max-content;
+    text-align: center;
+    width: 100%;
+    outline: 1px solid var(--coolPurple);
     padding: 2%;
     margin-top: 1rem;
 }
 
-label, input {
-    margin: 1rem
+label {
+    margin: 1rem 0rem 0rem 0rem;
 }
 
 #answers {
@@ -63,29 +66,28 @@ label, input {
 
 .btnbar button:hover {
     outline-color: white;
-    background-color: var(--coolPurple);
+    outline-offset: 5px;
+    border-color: white;
     color: white;
-    border-radius: 100% 100% 100% 100%;
+    background-color: var(--coolPurple);
 }
 
-.enunciado {
-    background-image: url('../ativ8.png');
+#enunciado {
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-image: url('../img/ativ8.png');
     background-position: right;
     background-repeat: no-repeat;
     background-size: contain;
-    outline: 1px solid red;
     aspect-ratio: 1.368 / 1;
     min-height: 30%;
-    /* min-width: 228px; */
-    opacity: 50%;
-    position: absolute;
+    opacity: 60%;
     right: 0%;
 }
 
-.enunciado:hover {
-    /* position: relative; */
-    /* background-position: center; */
-    height: 684px;
+#enunciado:hover {
+    height: 100%;
     opacity: 100%;
     transition: ease 1s;
 }
