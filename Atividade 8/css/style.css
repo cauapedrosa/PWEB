@@ -7,6 +7,7 @@ html, body {
     height: 100%;
     color: #fff;
     line-height: 2rem;
+    overflow-x: hidden;
 }
 
 h1 {
@@ -19,10 +20,9 @@ h1:hover {
 }
 
 .inputform {
-    position: relative;
+    /* width: 100%; */
     outline: 1px solid var(--coolPurple);
     min-width: 50%;
-    max-width: max-content;
     margin: 1rem;
     padding: 5rem;
 }
@@ -31,33 +31,21 @@ h1:hover {
     text-align: center;
     width: 100%;
     outline: 1px solid var(--coolPurple);
-    padding: 2%;
-    margin-top: 1rem;
-}
-
-label {
-    margin: 1rem 0rem 0rem 0rem;
-}
-
-#answers {
-    text-align: center;
-    margin: 2rem 1rem 1rem 1rem;
-    width: 100%;
     padding: 1rem;
-    outline: 1px solid var(--coolPurple)
+    margin-top: 1rem;
 }
 
 .btnbar {
     display: flex;
+    width: 100%;
     justify-content: space-evenly;
-    margin-top: 5%;
-    /* padding: 15% 5% 5% 5%; */
+    margin-top: 2rem;
 }
 
 .btnbar button {
     color: black;
     font-weight: 600;
-    padding: 10px;
+    padding: 1rem;
     background-color: #fff;
     outline: 1px solid var(--coolPurple);
     outline-offset: -5px;
@@ -72,23 +60,28 @@ label {
     background-color: var(--coolPurple);
 }
 
-#enunciado {
-    position: fixed;
-    top: 0;
-    right: 0;
-    background-image: url('../img/ativ8.png');
-    background-position: right;
-    background-repeat: no-repeat;
-    background-size: contain;
-    aspect-ratio: 1.368 / 1;
-    min-height: 30%;
-    opacity: 60%;
-    right: 0%;
+#answers {
+    text-align: center;
+    margin-top: 2rem;
+    width: 100%;
+    padding: 1rem;
+    outline: 1px solid var(--coolPurple)
 }
 
-#enunciado:hover {
-    height: 100%;
-    opacity: 100%;
-    transition: ease 1s;
-    z-index: 1;
+/* Media Queries */
+
+@media screen and (max-width: 500px) {
+    .inputform {
+        text-align: center;
+        outline: none;
+        padding: 1%;
+    }
+    .row {
+        text-align: left;
+        max-width: max-content;
+        outline-offset: -1%;
+    }
+    #answers {
+        max-width: max-content;
+    }
 }
