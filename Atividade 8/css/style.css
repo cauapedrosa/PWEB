@@ -1,0 +1,91 @@
+@import url("../css/globals.css");
+html, body {
+    margin: 0%;
+    font-family: Helvetica, Arial, sans-serif;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+}
+
+h1 {
+    text-align: center;
+}
+
+h1:hover {
+    text-decoration: var(--coolPurple) wavy underline;
+    cursor: pointer;
+}
+
+.inputform {
+    outline: 1px solid var(--coolPurple);
+    min-width: 50%;
+    max-width: max-content;
+    margin: 1rem;
+    padding: 5rem;
+}
+
+.row {
+    outline: 1px solid white;
+    max-width: max-content;
+    padding: 2%;
+    margin-top: 1rem;
+}
+
+label, input {
+    margin: 1rem
+}
+
+#answers {
+    text-align: center;
+    margin: 2rem 1rem 1rem 1rem;
+    width: 100%;
+    padding: 1rem;
+    outline: 1px solid var(--coolPurple)
+}
+
+.btnbar {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 5%;
+    /* padding: 15% 5% 5% 5%; */
+}
+
+.btnbar button {
+    color: black;
+    font-weight: 600;
+    padding: 10px;
+    background-color: #fff;
+    outline: 1px solid var(--coolPurple);
+    outline-offset: -5px;
+    border: 1px solid var(--coolPurple);
+}
+
+.btnbar button:hover {
+    outline-color: white;
+    background-color: var(--coolPurple);
+    color: white;
+    border-radius: 100% 100% 100% 100%;
+}
+
+.enunciado {
+    background-image: url('../ativ8.png');
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: contain;
+    outline: 1px solid red;
+    aspect-ratio: 1.368 / 1;
+    min-height: 30%;
+    /* min-width: 228px; */
+    opacity: 50%;
+    position: absolute;
+    right: 0%;
+}
+
+.enunciado:hover {
+    /* position: relative; */
+    /* background-position: center; */
+    height: 684px;
+    opacity: 100%;
+    transition: ease 1s;
+}
