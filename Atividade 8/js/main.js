@@ -74,7 +74,7 @@ function btnSave() {
 }
 
 function btnCalc() {
-    var ret = "Resultado dos Cálculos: "
+    var ret = `Resultado dos Cálculos: `
     const count = pesquisa.length;
     if (count == 0) {
         document.getElementById("answers").innerHTML = `Não há cadastros para calcular.`;
@@ -131,20 +131,25 @@ function btnCalc() {
 
     // Cálculo da % de Opiniões Positivas
     var goodReviews = parseInt(((amtO3 + amtO4) / count) * 100)
-
-    ret += "<br>Média das idades: " + avgAge;
+    ret += `<div class="row"><div class="reg">`;
+    ret += "<br>Média das idades: " + avgAge.toFixed(2);
     ret += "<br>Maior Idade: " + oldest;
     ret += "<br>Menor Idade: " + youngest;
     ret += "<br>Qtd de \"Péssimos\": " + amtO1;
-    ret += "<br>Porcentagem de Ótimo/Bom: " + goodReviews + "%";
-    ret += "<br>Quantidade de Homens:" + amtS1;
-    ret += "<br>Quantidade de Mulheres" + amtS2;
+    ret += "<br>Porcentagem de Ótimo/Bom: " + goodReviews.toFixed(2) + "%";
+    ret += "<br>Quantidade de Homens: " + amtS1;
+    ret += "<br>Quantidade de Mulheres: " + amtS2;
+    ret += `</div></div>`;
+
     document.getElementById("answers").innerHTML = ret;
 }
 
 function btnList() {
-    let aux = "Lista de Registros:";
+    var aux = ``;
     var i = 0;
+    aux += `Contagem: ${pesquisa.length}`;
+    aux += `<div class=row>`;
+
     if (pesquisa.length == 0) {
         document.getElementById("answers").innerHTML = `Não há cadastros para listar.`;
         return null;
@@ -152,23 +157,25 @@ function btnList() {
 
     pesquisa.forEach(P => {
         i++;
-        aux += `<br>#${i} ------------------`;
+        aux += `<div class='reg'>`;
+        aux += `#${i}`;
         aux += `<br>Idade: ${P.idade}`;
         aux += `<br>Sexo: ${P.sexo}`;
         aux += `<br>Opinião: ${P.nota}`;
-    });
-    aux += `<br>----------------------`;
-    aux += `<br>Contagem: ${i}`;
+        aux += `</div>`;
 
+    });
+
+    aux += `</div>`;
     document.getElementById("answers").innerHTML = aux;
 }
 
 function btnClear() {
-    let aux = `Resultados aparecerão aqui<br>`;
-    let n = pesquisa.length;  //number of cadastros in pesquisa
-    // 
-    if (n > 0) {
-        aux += `${pesquisa.length} cadastro(s) encontrado(s).`;
+    if (pesquisa.length < 2) {
+        location.reload();
+    } else {
+        if (confirm(`Tem certeza que deseja limpar?\nVocê perderá ${pesquisa.length} cadastros.`)) {
+            location.reload();
+        }
     }
-    document.getElementById("answers").innerHTML = aux;
 }

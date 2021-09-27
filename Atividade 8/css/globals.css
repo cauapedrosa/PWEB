@@ -33,11 +33,3 @@ body::-webkit-scrollbar-thumb {
     width: extend-to-zoom;
     zoom: 1.0;
 }
-
-/* #################### Media Queries #################### */
-
-@media screen and (max-width: 900px) {}
-
-@media screen and (max-width: 600px) {}
-
-@media screen and (max-width: 375px) {}

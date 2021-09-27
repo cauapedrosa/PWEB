@@ -10,13 +10,16 @@
     --btnWidth: calc(100% / 5);
 }
 
-h1 {
-    text-align: center;
-}
-
 body {
     margin: auto;
 }
+
+h1:first-child:hover {
+    cursor: grab;
+    text-decoration: wavy underline yellow;
+}
+
+/* Input Form */
 
 .inputform {
     /* max-width: 1200px; */
@@ -26,7 +29,7 @@ body {
     padding: 5rem;
 }
 
-.row {
+.inputform>.row {
     text-align: center;
     min-width: 100%;
     outline: 1px solid #000;
@@ -39,6 +42,8 @@ body {
     border: 1px solid #fff;
     width: 6ch;
 }
+
+/* Button Controls */
 
 .btnbar {
     display: flex;
@@ -65,34 +70,74 @@ body {
     border-color: white;
     color: white;
     background-color: var(--coolPurple);
+    cursor: pointer;
 }
+
+/* Answers Panel */
 
 #answers {
     position: relative;
-    padding: 1rem;
-    margin-top: 2rem;
+    padding: 1em;
+    margin-top: 3%;
     min-width: 100%;
     outline: 1px solid #000;
     text-align: center;
     line-height: 1.5rem;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    flex-direction: column;
 }
 
+#answers>.row {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+#answers>.row>.reg {
+    outline: 1px solid white;
+    min-width: max-content;
+    max-width: max-content;
+    background-color: black;
+    padding: 0.5em;
+    margin-top: 0.5em;
+    margin-inline: 0.25em;
+}
+
+/* Background */
+
 #bgwaves {
-    position: absolute;
+    position: fixed;
     top: 0;
-    aspect-ratio: 900/300;
-    height: 100%;
-    z-index: -10;
-    background-repeat: no-repeat;
+    left: 0;
+    aspect-ratio: 16/9;
+    width: 100%;
+    z-index: -1;
+    /* background-repeat: no-repeat; */
     background-position: center;
-    background-size: cover;
-    background-image: url('../svg/layered-waves-haikei.svg');
+    background-size: contain;
+    background-image: url('../svg/layered-steps-haikei.svg');
 }
 
 /* Media Queries */
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 700px) {
     .inputform {
         padding: 1%;
+    }
+    #bgwaves {
+        width: unset;
+        height: 100%;
+    }
+}
+
+@media screen and (min-width: 700px) {
+    #answers>.row>.reg {
+        width: 20ch;
+        padding: 1em;
+        margin-top: 4em;
+        margin-inline: 2em;
     }
 }
