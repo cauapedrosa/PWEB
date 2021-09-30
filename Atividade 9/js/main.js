@@ -9,9 +9,7 @@ function btnClick() {
     log(`BtnClick(${n1},${n2},${n3})`);
     if (!(n1 > 0 && n2 > 0 && n3 > 0)) {
         out += `Invalid Input`;
-        return;
     } else {
-        // alert(`${n1}\n${n2}\n${n3}`);
         out += `The greatest: ${greatest(n1, n2, n3)}`;
         out += `<br>  Sorted: ${sorted(n1, n2, n3)}`
     }
