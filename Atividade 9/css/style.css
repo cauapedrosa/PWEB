@@ -1,0 +1,79 @@
+@import url("../css/globals.css");
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #fff;
+    font-family: 'Roboto', Helvetica, sans-serif;
+    text-align: center;
+}
+
+body {
+    margin: auto;
+}
+
+/* Title */
+
+h1 {
+    font-size: 200%;
+    word-wrap: break-word;
+}
+
+/* Main */
+
+.main {
+    outline: 1px solid var(--coolPurple);
+    margin: auto;
+    max-width: 90%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+/* Inputs */
+
+input {
+    color: #000;
+    background-color: #fff;
+    border: 1px solid var(--coolPurple);
+    font-weight: 600;
+    padding: 5px;
+    margin: 1% 5% 1% 5%;
+}
+
+/* Button Controls */
+
+button {
+    color: black;
+    font-weight: 600;
+    background-color: #fff;
+    outline: 1px solid var(--coolPurple);
+    outline-offset: -3px;
+    border: 1px solid var(--coolPurple);
+    margin: 1%;
+    padding: 1%;
+    width: 20%;
+}
+
+button:hover {
+    outline-color: white;
+    outline-offset: 1px;
+    border-color: white;
+    color: white;
+    background-color: var(--coolPurple);
+    cursor: pointer;
+}
+
+/* Output */
+
+#output {
+    margin: 5%;
+    font-size: 150%;
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 700px) {}
+
+@media screen and (min-width: 700px) {}
