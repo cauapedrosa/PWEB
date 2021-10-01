@@ -24,7 +24,7 @@ h1 {
 .main {
     outline: 1px solid var(--coolPurple);
     margin: auto;
-    max-width: 90%;
+    max-width: 800px;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -63,6 +63,19 @@ button:hover {
     color: white;
     background-color: var(--coolPurple);
     cursor: pointer;
+}
+
+/* Visual */
+
+.bgwaves {
+    background: url('../img/stacked-waves-haikei.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.bgblack {
+    background-color: #000;
 }
 
 /* Output */

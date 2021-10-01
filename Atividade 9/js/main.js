@@ -6,7 +6,7 @@ function btnClick() {
     n3 = parseInt(document.getElementById('n3').value);
     out = ``;
 
-    log(`BtnClick(${n1},${n2},${n3})`);
+    // log(`BtnClick(${n1},${n2},${n3})`);
     if (!(n1 > 0 && n2 > 0 && n3 > 0)) {
         out += `Invalid Input`;
     } else {
