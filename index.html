@@ -5,16 +5,54 @@
     <meta charset='utf-8'>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="misc/sunglasses_emoji.png" />
+
     <title>Cauã Pedrosa - PWEB on GitHub</title>
+
     <link rel="stylesheet" href="misc/style.css">
+
+    <!-- Import Kute.js -->
+    <script src="https://cdn.jsdelivr.net/npm/kute.js@2.1.2/dist/kute.min.js"></script>
+
 </head>
 
 <body>
+
+
+
+    <!-- Blobs -->
+
+    <svg id="visual" viewBox="0 0 900 600" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+        version="1.1">
+        <g transform="translate(476.9271623591047 326.23069087343606)">
+            <path id="blob1"
+                d="M121.7 -176.2C151.4 -146 164.6 -101.9 174.4 -59.5C184.2 -17.2 190.5 23.4 184.1 65C177.7 106.6 158.5 149.1 125.7 163.5C92.9 177.8 46.4 163.9 2.3 160.8C-41.9 157.7 -83.9 165.4 -111.1 149.3C-138.4 133.1 -151 93.1 -177.6 48.8C-204.2 4.5 -244.7 -44.1 -240.2 -84.2C-235.7 -124.4 -186 -156 -138.5 -180.4C-90.9 -204.8 -45.5 -221.9 0.3 -222.3C46 -222.7 92.1 -206.4 121.7 -176.2"
+                fill="#AA00FF"></path>
+        </g>
+        <g transform="translate(459.66379314508094 299.0107404300373)" style="visibility: hidden">
+            <path id="blob2"
+                d="M76.1 -146.2C102.3 -116.8 129.5 -103.6 166.8 -82C204.2 -60.3 251.6 -30.2 248 -2.1C244.4 26 189.7 52 153.1 74.9C116.6 97.9 98 117.8 75.5 145.5C53 173.1 26.5 208.6 -11.4 228.3C-49.3 248.1 -98.7 252.2 -120.9 224.4C-143.1 196.6 -138.2 136.8 -163.6 94.1C-188.9 51.3 -244.5 25.7 -261.5 -9.8C-278.5 -45.3 -257 -90.7 -228.2 -127.3C-199.4 -164 -163.2 -192 -123.9 -213.8C-84.7 -235.6 -42.3 -251.3 -8.7 -236.3C25 -221.3 50 -175.6 76.1 -146.2"
+                fill="#AA00FF"></path>
+        </g>
+    </svg>
+
+
+    <!-- Kute Animation -->
+    <script>
+        const tween = KUTE.fromTo(
+            '#blob1',
+            { path: '#blob1' },
+            { path: '#blob2' },
+            { repeat: 999, duration: 3000, yoyo: true }
+        )
+        tween.start()
+    </script>
+
+
     <div class="topbar">
-        <h1>Cauã Pedrosa </h1>
-        <br>
-        <h2>Atividades PWEB</h2>
+        <a href="https://github.com/cauapedrosa">Cauã Pedrosa</a>
+        <a href="https://github.com/cauapedrosa/PWEB">Atividades PWEB</a>
     </div>
+
     <div class="atvsList">
         <a href="https://github.com/cauapedrosa/PWEB/tree/main/Atividade%201">Atividade 1</a>
         <a href="https://github.com/cauapedrosa/PWEB/tree/main/Atividade%202">Atividade 2</a>
@@ -25,8 +63,11 @@
         <a href="/PWEB/Atividade 7/index.html">Atividade 7</a>
         <a href="/PWEB/Atividade 8/index.html">Atividade 8</a>
         <a href="/PWEB/Atividade 9/index.html">Atividade 9</a>
-        <a href="https://cauapedrosa.github.io/portfolio/">Portfolio</a>
+        <a href="https://cauapedrosa.github.io/portfolio/" id="portfolio">Portfolio</a>
     </div>
+
+
+
 </body>
 
 </html>
