@@ -24,11 +24,16 @@ h1 {
 .main {
     outline: 1px solid var(--coolPurple);
     margin: auto;
-    max-width: 800px;
+    max-width: 900px;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    /* bg */
+    background-image: url('../img/blackbg.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 /* Inputs */
@@ -42,6 +47,13 @@ input {
     margin: 1% 5% 1% 5%;
 }
 
+input:focus {
+    /* border: 1px solid fuchsia; */
+    outline-color: var(--coolPurple);
+    /* border-color: var(--coolPurple); */
+    /* accent-color: limegreen; */
+}
+
 /* Button Controls */
 
 button {
@@ -53,7 +65,11 @@ button {
     border: 1px solid var(--coolPurple);
     margin: 1%;
     padding: 1%;
-    width: 20%;
+    aspect-ratio: 6/2;
+    /* height: 3rem; */
+    min-height: 2.5rem;
+    min-width: 20%;
+    max-width: 50%;
 }
 
 button:hover {
@@ -69,8 +85,9 @@ button:hover {
 
 .bgwaves {
     background: url('../img/stacked-waves-haikei.svg');
+    aspect-ratio: 9/6;
     background-size: cover;
-    background-position: center;
+    background-position: top;
     background-repeat: no-repeat;
 }
 

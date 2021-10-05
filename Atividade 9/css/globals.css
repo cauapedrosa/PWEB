@@ -8,6 +8,10 @@
     --coolPurple2: rgb(90, 0, 130);
 }
 
+button:hover, input:hover, h1:hover, h4:hover {
+    text-decoration: underline;
+}
+
 /* #################### Fonts  #################### */
 
 /* Import Roboto from Google Fonts */
