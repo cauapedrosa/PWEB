@@ -28,9 +28,18 @@ body {
 }
 
 .topbar a {
-    font-size: 2rem;
+    font-size: 2em;
     color: #fff;
     text-decoration: none;
+    padding: 1em;
+    border: 2px solid #fff;
+    outline: 2px solid #fff;
+    outline-offset: -2px;
+}
+
+.topbar a:hover, .topbar a:focus {
+    outline-offset: -6px;
+    transition: ease 250ms;
 }
 
 /* List */
@@ -39,7 +48,7 @@ body {
     margin-top: 20%;
     display: flex;
     /* flex-wrap: wrap; */
-    flex-flow: wrap-reverse;
+    flex-flow: wrap;
     justify-content: space-evenly;
 }
 
@@ -49,27 +58,26 @@ body {
     min-width: var(--btnSize);
     max-width: 50vw;
     color: #fff;
+    text-decoration: none;
     margin-bottom: 3%;
     font-size: 2rem;
     text-align: center;
     border: 2px solid #fff;
-    border-radius: 5rem 5rem;
-    text-decoration: none;
-    opacity: 65%;
-}
-
-.atvsList a:hover {
-    opacity: 95%;
-    background-color: var(--accentColor);
-    color: #000;
-    text-decoration: 2px solid underline var(--linkBlue);
-    /* border-color: var(--accentColor); */
-    /* border-color: var(--linkBlue); */
-    outline: 2px solid var(--linkBlue);
+    border-radius: 50vw;
+    outline: 2px solid #fff;
     outline-offset: -4px;
+    opacity: 75%;
 }
 
-#portfolio:hover {
+.atvsList a:hover, .atvsList a:focus {
+    opacity: 95%;
+    background-color: #fff;
+    color: #000;
+    outline-color: var(--accentColor);
+    transition: 1s ease;
+}
+
+#portfolio:hover, #portfolio:focus {
     background-color: #000;
     color: white;
     outline: none;
