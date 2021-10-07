@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="img/sunglasses_emoji.png" />
+    <title>Atividade10 - PWEB - Cauã Pedrosa</title>
+
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
+
+    <!-- <script src="main.js"></script> -->
+    <style>
+        :root {
+            background: #222;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        const log = console.log;
+
+        function Aluno(r, n) {
+            this.RA = r;
+            this.Nome = n;
+        }
+
+        var Aluno1 = {
+            RA: 123,
+            Nome: "Joao"
+        };
+
+        var Aluno2 = {};
+        Aluno2.RA = 124;
+        Aluno2.Nome = "Ana";
+
+        var Aluno3 = new Aluno(125, "Carlos");
+        // Aluno3.RA = 125;
+        // Aluno3.Nome = "Carlos";
+
+        log(Aluno1);
+        log(Aluno2);
+        log(Aluno3);
+        alert(
+            `Aluno1:\n    RA: ${Aluno1.RA}, Nome: ${Aluno1.Nome}\nAluno2:\n     RA: ${Aluno2.RA}, Nome: ${Aluno2.Nome}\nAluno3:\n    RA: ${Aluno3.RA}, Nome: ${Aluno3.Nome}\n`);
+    </script>
+</body>
+
+</html>
