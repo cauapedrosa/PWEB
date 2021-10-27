@@ -4,7 +4,7 @@
 <head>
     <meta charset='utf-8'>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="img/sunglasses_emoji.png" />
+    <link rel="icon" type="image" href="favicon.ico" />
     <title>Atividade 11 - PWEB - Cauã Pedrosa</title>
 
     <link rel="stylesheet" href="css/style.css">
@@ -19,6 +19,101 @@
 
 <body>
 
+    <div class="topbar">
+        <h1>Atividade 11</h1>
+        <div class="row">
+            <a href="#top">Rectangle</a>
+            <a href="#answer2">Account</a>
+        </div>
+    </div>
+
+    <div class="main">
+
+
+        <!-- Part One -->
+        <div class="card">
+            <h4>Rectangle</h4>
+            <form>
+                <div class="row">
+                    <label for="in-base">Base</label>
+                    <input type="number" id="in-base">
+                </div>
+
+                <div class="row">
+                    <label for="in-height">Height</label>
+                    <input type="number" id="in-height">
+                </div>
+                <div class="row row-btn">
+                    <button type="button" onclick="btnCalcArea()">Calc Area</button>
+                    <button type="reset">Reset</button>
+                </div>
+                <div id="answer1">Insert sides and click the button</div>
+            </form>
+        </div>
+
+
+        <!-- Part Two -->
+        <div class="card">
+            <h4>Account</h4>
+
+            <form>
+                <div class="row">
+                    <label for="in-name">Name</label>
+                    <input type="text" id="in-name">
+                </div>
+
+                <div class="row">
+                    <label for="in-bank">Bank Nº</label>
+                    <input type="number" id="in-bank">
+                </div>
+
+                <div class="row">
+                    <label for="in-accNum">Acc Nº</label>
+                    <input type="number" id="in-accNum">
+                </div>
+
+                <div class="row">
+                    <label for="in-balance">Balance</label>
+                    <input type="number" id="in-balance">
+                </div>
+
+                <div class="row">
+                    <label for="in-specialBal">Special Balance</label>
+                    <input type="number" id="in-specialBal">
+                </div>
+
+                <div class="row">
+                    <label for="in-fee">Fee</label>
+                    <input type="number" id="in-fee">
+                </div>
+
+                <div class="row">
+                    <label for="in-dueDate">Due Date</label>
+                    <input type="date" id="in-dueDate">
+                </div>
+
+
+                <div class="row row-btn" id="accType">
+                    <div class="row">
+                        <label for="in-checking">Checking</label>
+                        <input type="radio" name="type" id="checking">
+                    </div>
+                    <div class="row">
+                        <label for="in-savings">Savings</label>
+                        <input type="radio" name="type" id="savings">
+                    </div>
+                </div>
+
+                <div class="row row-btn">
+                    <button type="button" onclick="btnRegister()">Register</button>
+                    <button type="button" onclick="list()">List</button>
+                    <button type="reset">Reset</button>
+                </div>
+                <div id="answer2">Insert info and click the button</div>
+            </form>
+        </div>
+
+    </div>
 </body>
 
 </html>

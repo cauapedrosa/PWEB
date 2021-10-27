@@ -1,4 +1,119 @@
 const log = console.log;
+var Accounts = [{}]
+
+// ################ Buttons
+
+function btnCalcArea() {
+    x = parseInt(document.getElementById("in-base").value);
+    y = parseInt(document.getElementById("in-height").value);
+    out = ``;
+    if (!(x >= 0)) {
+        alert("Base is not a natural number");
+        return;
+    } else if (!(y >= 0)) {
+        alert("Height is not a natural number");
+        return;
+    }
+    // alert(`success!\nx:${x}\ny:${y}`)
+    // log(Rectangles)
+
+    let R = new Rectangle(x, y);
+    let area = getArea(R);
+    out += `Area of Rectangle(${R.b}, ${R.h}) is <div id="area">${area}</div>`;
+
+    document.getElementById("answer1").innerHTML = out;
+    return;
+}
+
+function btnRegister() {
+    document.getElementById("answer2").innerHTML = register()
+
+    return;
+}
+
+function register() {
+
+    let name = document.getElementById("in-name").value;
+    bank = parseInt(document.getElementById("in-bank").value);
+    accNum = parseInt(document.getElementById("in-accNum").value);
+    balance = parseInt(document.getElementById("in-balance").value);
+    // accType = document.getElementById("accType").children;
+    let out = `Please fill out the form<br>`;
+
+    //  input validation
+    if (!(name.length > 0) || !(bank > 0) || !(accNum > 0)) {
+        return out;
+    }
+    if (document.getElementById("checking").checked) {
+        accType = checking;
+        log(`set accType to checking`);
+    } else if (document.getElementById("savings").checked) {
+        accType = savings;
+        log(`set accType to savings`);
+    } else {
+        out += `Select account type<br>`;
+        return out
+    }
+
+
+    let i;
+    // instance checking acc
+    if (accType == checking) {
+        specialBal = parseInt(document.getElementById("in-specialBal").value);
+        if (!(specialBal >= 0))
+            out += `Special Balance Invalid<br>`
+        else {
+            A = new checking(name, bank, accNum, balance, specialBal);
+            out = A.toHtml();
+            i = Accounts.push(A);
+        }
+
+    }
+    // instance savings acc
+    else if (accType == savings) {
+        fee = parseInt(document.getElementById("in-fee").value);
+        dueDate = Date(document.getElementById("in-dueDate").value);
+
+        if (!(fee >= 0)) {
+            out += `Invalid Fee<br>`
+        } else {
+            A = new savings(name, bank, accNum, balance, fee, dueDate);
+            out = A.toHtml();
+            i = Accounts.push(A);
+        }
+
+    } else {
+        alert("failed instancing")
+        return out // only works if instancing fails
+    }
+
+    log(`Accounts[i]: ${Accounts[i]}`)
+    return out
+    // output handling
+    out += `Account #${A._accNum} registered!<br>`
+    out += ` Name: ${A._name} - Bank: ${A._bank} <br>`
+    out += `Balance: ${A._balance}<br>`;
+    log(accType)
+    if (accType = checking) {
+        out += `Type: Checking<br>Special Balance: ${A._specialBalance}`
+    } else if (accType = savings) {
+        out += `Type: Savings<br>`
+        out += `Fee:${A._fee} - Due Date: ${A._dueDate}<br>`;
+    }
+    return out
+}
+
+function list() {
+    out = `No Accounts Registered<br>`
+    if (Accounts.length > 1) {
+        out = `${Accounts.length} Accounts Registered<br>`
+        Accounts.forEach(account => {
+            out += A.toHtml()
+            out += `<br> ################ <br>`
+        });
+    }
+    document.getElementById("answer2").innerHTML = out;
+}
 
 // ################ 1 - Object Rectangle and its area
 function Rectangle(x, y) {
@@ -6,22 +121,17 @@ function Rectangle(x, y) {
     this.h = y;
 }
 function getArea(R) {
-    // log(`Base: ${R.b}, Height: ${R.h} should output ${R.b * R.h}`);
+    // log(`Base: ${ R.b }, Height: ${ R.h } should output ${ R.b * R.h } `);
     return parseInt(R.b * R.h);
 }
-let r1 = new Rectangle(10, 20);
-// log(r1);
-// log(getArea(r1));
-
-alert(`########## 1 ##########\nRectangle\nBase: ${r1.b}\nHeight: ${r1.h}\nArea: ${getArea(r1)}`);
 
 // ################ 2 - Account Object
 class account {
-    constructor(name, bank, accNum) {
+    constructor(name, bank, accNum, balance) {
         this._name = name;
         this._bank = bank;
         this._accNum = accNum;
-        this._balance = 0;
+        this._balance = balance;
     };
     getName() {
         return this._name
@@ -42,8 +152,8 @@ class account {
 };
 
 class checking extends account {
-    constructor(name, bank, accNum, specialBal) {
-        super(name, bank, accNum)
+    constructor(name, bank, accNum, balance, specialBal) {
+        super(name, bank, accNum, balance)
         this._specialBalance = specialBal;
     }
     setSpecialBalance(specialBal) {
@@ -61,14 +171,25 @@ Bank: ${this.getBank()}
 Acc # ${this.getAccNum()}
 Balance: ${this.getBalance()}
 Special Balance: ${this.getSpecialBalance()}
-`
+        `
         )
+    }
+
+    toHtml() {
+        return (
+            `Account Type: Checking<br>
+Name: ${this.getName()}<br>
+Bank: ${this.getBank()}<br>
+Acc # ${this.getAccNum()}<br>
+Balance: ${this.getBalance()}<br>
+Special Balance: ${this.getSpecialBalance()}
+        `)
     }
 }
 
 class savings extends account {
-    constructor(name, bank, accNum, fee, dueDate) {
-        super(name, bank, accNum);
+    constructor(name, bank, accNum, balance, fee, dueDate) {
+        super(name, bank, accNum, balance);
         this._fee = fee;
         this._dueDate = dueDate;
     }
@@ -94,17 +215,39 @@ Acc # ${this.getAccNum()}
 Balance: ${this.getBalance()}
 Fee: ${this.getFee()}
 Due Date: ${this.getDueDate()}
+        `
+        )
+    }
+
+    toHtml() {
+        return (
+            `Account Type: Savings<br>
+Name: ${this.getName()}<br>
+Bank: ${this.getBank()}<br>
+Acc # ${this.getAccNum()}<br>
+Balance: ${this.getBalance()}<br>
+Fee: ${this.getFee()}<br>
+Due Date: ${this.getDueDate()}
 `
         )
+
     }
 }
 
-let acc1 = new checking("Joao", 1, 123, 200.0);
-acc1.setSpecialBalance(200.0);
-let acc2 = new savings("Ana", 2, 234, 50.0, "1/1/2010")
-acc2.setDueDate
 
-// log(acc1);
-// log(acc2);
-alert(`########## 2. ##########\n${acc1.toString()}------------------------------
-${acc2.toString()}`)
+
+
+
+
+
+
+// ################ Runtime
+
+// let r1 = new Rectangle(10, 20);
+// alert(`########## 1 ##########\nRectangle\nBase: ${ r1.b } \nHeight: ${ r1.h } \nArea: ${ getArea(r1) } `);
+
+// let acc1 = new checking("Joao", 1, 123, 200.0);
+// acc1.setSpecialBalance(200.0);
+// let acc2 = new savings("Ana", 2, 234, 50.0, "1/1/2010")
+// acc2.setDueDate
+// alert(`########## 2. ##########\n${ acc1.toString() } ------------------------------\n${ acc2.toString() } `)

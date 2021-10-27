@@ -3,9 +3,118 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    color: #fff;
     font-family: 'Roboto', Helvetica, sans-serif;
+    /* text-align: center; */
+}
+
+html {
+    color: #fff;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+}
+
+.topbar {
+    display: block;
+    scroll-snap-align: start;
     text-align: center;
+    padding: 5em;
+    width: 100%;
+    min-height: 25vh;
+    outline: 1px solid magenta;
+    outline-offset: -2px;
+}
+
+.topbar a {
+    border: 1px solid #fff;
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5em 1em;
+    /* line-height: 10em; */
+    margin: 1%;
+    cursor: pointer;
+}
+
+.main {
+    /* border: 1px solid magenta; */
+    margin: auto;
+    width: 100%;
+}
+
+/* Body */
+
+.card {
+    display: flex;
+    flex-direction: column;
+    min-height: 50vh;
+    margin: auto;
+    margin-block: 10%;
+    text-align: left;
+    padding: 2%;
+    background-color: #333;
+    border: 1px solid white;
+    max-width: 1000px;
+    scroll-snap-align: center;
+}
+
+.card * {
+    margin-block: 0.5vh;
+}
+
+.card label {
+    /* outline: 1px solid violet; */
+    text-align: right;
+    width: 12ch;
+    min-width: max-content;
+}
+
+.row {
+    /* outline: 1px solid yellow; */
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.card input {
+    accent-color: var(--clr-purple);
+    /* width: 8ch; */
+    /* color: black;
+    width: 100%;
+    max-width: 50%;
+    margin: 0.1em */
+}
+
+.row-btn {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+button {
+    color: #000;
+    background-color: #fff;
+    padding: 0.5em 1em;
+    width: 100%;
+    max-width: 25vw;
+}
+
+form {
+    outline: 1px dotted #555;
+}
+
+form * {
+    margin: 2% 1%;
+}
+
+/* Answers */
+
+#answer1, #answer2 {
+    font-size: 1.25em;
+    text-align: center;
+    padding-top: 50px;
+}
+
+#area {
+    font-size: 5em;
+    font-weight: 100;
 }
 
 /* Media Queries */

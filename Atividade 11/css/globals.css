@@ -1,11 +1,10 @@
 :root {
     width: 100%;
     height: 100%;
-    overflow-x: hidden;
-    overflow-y: auto;
+    overflow: auto;
     background-color: #000;
-    --coolPurple: #AA00FF;
-    --coolPurple2: rgb(90, 0, 130);
+    --clr-purple: #AA00FF;
+    --clr-purple-dark: rgb(90, 0, 130);
 }
 
 /* #################### Viewport  #################### */
