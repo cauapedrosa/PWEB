@@ -8,6 +8,3 @@ function hover() {
 function unhover() {
     win.setAttribute(`src`, `./img/window-closed.png`);
 }
-function shatter() {
-    win.setAttribute(`src`, `./img/window-shattered.png`);
-}
