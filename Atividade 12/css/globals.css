@@ -1,0 +1,20 @@
+:root {
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: #000;
+    --clr-purple: #AA00FF;
+    --clr-purple-dark: rgb(90, 0, 130);
+}
+
+/* #################### Viewport  #################### */
+
+@viewport {
+    width: extend-to-zoom;
+    zoom: 1.0;
+}
+
+@-ms-viewport {
+    width: extend-to-zoom;
+    zoom: 1.0;
+}
