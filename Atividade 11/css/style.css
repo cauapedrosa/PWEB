@@ -9,7 +9,6 @@
 
 html {
     color: #fff;
-    scroll-snap-type: y mandatory;
     scroll-behavior: smooth;
 }
 
@@ -53,7 +52,7 @@ html {
     background-color: #333;
     border: 1px solid white;
     max-width: 1000px;
-    scroll-snap-align: center;
+    scroll-snap-align: start;
 }
 
 .card * {

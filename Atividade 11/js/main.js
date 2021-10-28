@@ -32,12 +32,10 @@ function btnRegister() {
 }
 
 function register() {
-
     let name = document.getElementById("in-name").value;
     bank = parseInt(document.getElementById("in-bank").value);
     accNum = parseInt(document.getElementById("in-accNum").value);
     balance = parseInt(document.getElementById("in-balance").value);
-    // accType = document.getElementById("accType").children;
     let out = `Please fill out the form<br>`;
 
     //  input validation
@@ -46,10 +44,10 @@ function register() {
     }
     if (document.getElementById("checking").checked) {
         accType = checking;
-        log(`set accType to checking`);
+        // log(`set accType to checking`);
     } else if (document.getElementById("savings").checked) {
         accType = savings;
-        log(`set accType to savings`);
+        // log(`set accType to savings`);
     } else {
         out += `Select account type<br>`;
         return out
@@ -67,7 +65,6 @@ function register() {
             out = A.toHtml();
             i = Accounts.push(A);
         }
-
     }
     // instance savings acc
     else if (accType == savings) {
@@ -87,13 +84,11 @@ function register() {
         return out // only works if instancing fails
     }
 
-    log(`Accounts[i]: ${Accounts[i]}`)
-    return out
+    // return out
     // output handling
     out += `Account #${A._accNum} registered!<br>`
     out += ` Name: ${A._name} - Bank: ${A._bank} <br>`
     out += `Balance: ${A._balance}<br>`;
-    log(accType)
     if (accType = checking) {
         out += `Type: Checking<br>Special Balance: ${A._specialBalance}`
     } else if (accType = savings) {
@@ -106,10 +101,15 @@ function register() {
 function list() {
     out = `No Accounts Registered<br>`
     if (Accounts.length > 1) {
-        out = `${Accounts.length} Accounts Registered<br>`
+        out = `${Accounts.length - 1} Accounts Registered<br>`
         Accounts.forEach(account => {
-            out += A.toHtml()
-            out += `<br> ################ <br>`
+            if (account instanceof checking) {
+                out += account.toHtml()
+                out += `<br> ################ <br>`
+            } else if (account instanceof savings) {
+                out += account.toHtml()
+                out += `<br> ################ <br>`
+            }
         });
     }
     document.getElementById("answer2").innerHTML = out;
@@ -230,24 +230,6 @@ Fee: ${this.getFee()}<br>
 Due Date: ${this.getDueDate()}
 `
         )
-
     }
 }
 
-
-
-
-
-
-
-
-// ################ Runtime
-
-// let r1 = new Rectangle(10, 20);
-// alert(`########## 1 ##########\nRectangle\nBase: ${ r1.b } \nHeight: ${ r1.h } \nArea: ${ getArea(r1) } `);
-
-// let acc1 = new checking("Joao", 1, 123, 200.0);
-// acc1.setSpecialBalance(200.0);
-// let acc2 = new savings("Ana", 2, 234, 50.0, "1/1/2010")
-// acc2.setDueDate
-// alert(`########## 2. ##########\n${ acc1.toString() } ------------------------------\n${ acc2.toString() } `)
