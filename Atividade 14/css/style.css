@@ -1,0 +1,61 @@
+@import url("../css/globals.css");
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+}
+
+html {
+    color: #fff;
+    scroll-behavior: smooth;
+}
+
+/* Topbar */
+
+.topbar {
+    scroll-snap-align: start;
+    display: block;
+    text-align: center;
+    padding: 3em;
+    width: 100%;
+}
+
+/* Body */
+
+.main {
+    margin: auto;
+    width: 100%;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-block: 1em;
+}
+
+.row input, .row label {
+    line-height: 2em;
+    height: 2em;
+    margin-inline: 0.25em;
+}
+
+form {
+    outline: 1px solid var(--clr-blue1);
+    max-width: 1000px;
+    margin: auto;
+    padding-block: 5%;
+    accent-color: var(--clr-blue1);
+}
+
+form>* {
+    margin-bottom: 1em;
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 700px) {}
+
+@media screen and (min-width: 700px) {}
