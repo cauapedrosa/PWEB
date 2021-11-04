@@ -1,4 +1,10 @@
 @import url("../css/globals.css");
+:root {
+    --form-width: min(90vw, 1000px);
+    --btn-width: clamp(100px, 100%, 10vw);
+    --btn-height: 35px;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -44,14 +50,37 @@ html {
 
 form {
     outline: 1px solid var(--clr-blue1);
-    max-width: 1000px;
+    max-width: var(--form-width);
     margin: auto;
-    padding-block: 5%;
+    padding-block: 5vh;
     accent-color: var(--clr-blue1);
 }
 
 form>* {
     margin-bottom: 1em;
+}
+
+form button {
+    width: var(--btn-width);
+    height: var(--btn-height);
+    /* background-color: var(--clr-blue1); */
+    margin-inline: 20px;
+    border: 1px solid var(--clr-blue1);
+    outline: 1px solid var(--clr-blue1);
+    outline-offset: -1px;
+}
+
+form button:hover, form button:focus {
+    outline-offset: 4px;
+    transition: outline-offset 100ms linear;
+}
+
+#answer {
+    outline: 1px solid #fff;
+    max-width: var(--form-width);
+    margin-top: 2.5vh;
+    margin-inline: auto;
+    padding-block: 3vh;
 }
 
 /* Media Queries */

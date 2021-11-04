@@ -14,6 +14,7 @@ function popup() {
     var shortName = select.options[select.selectedIndex].value
 
     var URL = `http://www.fatecsorocaba.edu.br/curso_${shortName}.asp`
+    var windowFeatures = "width=600,height=300, menubar=0, toolbar=0"
 
-    window.open(URL, "popup", "width=600,height=300");
+    window.open(URL, "popup", windowFeatures)
 }

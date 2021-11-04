@@ -6,7 +6,7 @@ function valid() {
     var comment = document.getElementById("comment").value
     var formValid = true;
 
-    var out = `<br>`;
+    var out = ``;
 
     //checks
     if (name.length < 10) {
@@ -32,7 +32,7 @@ function submit_form() {
         var btnSim = btns[0].checked
         var btnNao = btns[1].checked
         if (!btnSim && !btnNao) {
-            alert("Por favor responda a Pesquisa")
+            document.getElementById("answer").innerHTML = "Por favor responda a Pesquisa"
             return false
         } else if (btnSim) {
             alert("Que bom que você voltou a visitar esta página!")
