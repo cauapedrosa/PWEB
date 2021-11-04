@@ -1,0 +1,19 @@
+:root {
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: #000;
+    --clr-blue1: rgba(0, 174, 255, 1);
+}
+
+/* #################### Viewport  #################### */
+
+@viewport {
+    width: extend-to-zoom;
+    zoom: 1.0;
+}
+
+@-ms-viewport {
+    width: extend-to-zoom;
+    zoom: 1.0;
+}
