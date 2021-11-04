@@ -20,6 +20,7 @@ html {
     text-align: center;
     padding: 3em;
     width: 100%;
+    margin-top: calc(100vw / 5);
 }
 
 /* Body */
@@ -56,8 +57,21 @@ input {
     accent-color: var(--clr-purple);
 }
 
-/* Media Queries */
+/* Visual */
 
-@media screen and (max-width: 700px) {}
+#visual {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    overflow: hidden;
+}
 
-@media screen and (min-width: 700px) {}
+#visual svg {
+    position: relative;
+    display: block;
+    aspect-ratio: 10 / 2;
+    width: 100vw;
+}
