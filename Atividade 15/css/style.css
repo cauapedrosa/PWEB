@@ -36,6 +36,9 @@ html {
     margin-block: 1em;
 }
 
+.main>* {
+    margin-block: .5em;
+}
 
 /* Media Queries */
 

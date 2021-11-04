@@ -5,16 +5,15 @@ function load() {
 
     var select = document.getElementById("courses")
     var text = select.options[select.selectedIndex].text
-    log(text)
 
     document.getElementById("answer").innerHTML = `Deseja ver mais informações sobre ${text}?`;
 }
 
-function open() {
+function popup() {
     var select = document.getElementById("courses")
     var shortName = select.options[select.selectedIndex].value
 
     var URL = `http://www.fatecsorocaba.edu.br/curso_${shortName}.asp`
 
-    window.open(URL, "_blank", "width=600, height=300");
+    window.open(URL, "popup", "width=600,height=300");
 }
